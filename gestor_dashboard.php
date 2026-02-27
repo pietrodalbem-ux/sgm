@@ -3,57 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Gestor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Ajuste para os cards não ficarem colados em telas pequenas */
+        .card { margin-bottom: 1rem; }
+    </style>
 </head>
-<body>
-    <header>
-     <nav class="navbar bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light">SGM | Gestão Administrativa</a>
-    <form class="d-flex" role="search">
-    <a class="navbar-brand">    <a class="navbar-brand text-light">Olá, Admin Gestor |</a>
-</a>
-            <button class="btn btn-outline-light"> <a href="api/logout.php" class="text-white">Sair</a></button>
+<body class="bg-light">
 
-      <button class="btn btn-outline-success" type="submit">Sair</button>
-    </form>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SGM | Gestor</a>
+        <div class="ms-auto d-flex align-items-center">
+            <span class="navbar-text me-3 text-white">Olá, Gestor |</span>
+            <a href="api/logout.php" class="btn btn-outline-danger btn-sm">
+                <i class="bi bi-box-arrow-right"></i> Sair
+            </a>
+        </div>
+    </div>
 </nav>
-    </header>
-            <main>
-        <div class="row">
-        <div class="col-sm-4 mb-3 mb-sm-0 ">
-            <div class="card text-bg-primary mb-3">
-            <div class="card-body">
-                <h1 class="card-title">Novas solicitações</h1>
-                <h2 class="card-text">0</h2>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card text-bg-warning mb-3">
-            <div class="card-body">
-                <h1 class="card-title text-light">Em atendimento</h1>
-                <h2 class="card-text text-light">0</h2>
-            </div>
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold">Minha Fila de Trabalho</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-3">
+            <div class="card bg-success text-white p-4 text-center shadow-sm">
+                <h6 class="text-uppercase opacity-75">Novas Solicitações</h6>
+                <h1 class="display-4 fw-bold">0</h1>
             </div>
         </div>
-            <div class="col-sm-4">
-            <div class="card text-bg-danger mb-3">
-            <div class="card-body">
-                <h1 class="card-title">Críticos / Urgentes</h1>
-                <h2 class="card-text">0</h2>
+
+        <div class="col-md-3">
+            <div class="card bg-warning text-dark p-4 text-center shadow-sm">
+                <h6 class="text-uppercase opacity-75">Em Andamento</h6>
+                <h1 class="display-4 fw-bold">0</h1>
             </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card bg-danger text-white p-4 text-center shadow-sm">
+                <h6 class="text-uppercase opacity-75">Críticos / Urgentes</h6>
+                <h1 class="display-4 fw-bold">0</h1>
             </div>
         </div>
+
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-center gap-3">
+        <a href="gestor_chamados.php" class="btn btn-secondary btn-lg px-4">
+            <i class="bi bi-list-ul"></i> Gerenciar Chamados
+        </a>    
+        <a href="gestor_gerenciar_ambientes.php" class="btn btn-outline-primary btn-lg px-4">
+            <i class="bi bi-gear"></i>Ambientes
+        </a>
+        <a href="gestor_gerenciar_ambientes.php" class="btn btn-outline-warning btn-lg px-4">
+            <i class=""></i> Blocos
+        </a>
+        <a href="gestor_gerenciar_ambientes.php" class="btn btn-outline-success btn-lg px-4">
+            <i class=""></i>Tipo de serviço
+        </a>
+        <a href="gestor_gerenciar_ambientes.php" class="btn btn-outline-danger btn-lg px-4">
+            <i class=""></i>Usarios
+        </a>
         </div>
-        <div>
-            <button type="button" class="btn btn-secondary">Gerenciar Todos os Chamados</button>
-            <button type="button" class="btn btn-outline-primary"><i class="bi bi-geo-alt"></i>Configurar ambiente</button>
-        </div>
-        </main>
-    <footer></footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

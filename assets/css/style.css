@@ -1,0 +1,129 @@
+/* Configurações Gerais */
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --border-color: #dee2e6;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+}
+
+#chamado_soli {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Card Principal */
+#cardCampos {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do Formulário */
+.topo_soli {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 15px;
+}
+
+.topo_soli h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.topo_soli a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.topo_soli a:hover {
+    color: var(--text-dark);
+}
+
+/* Campos do Formulário */
+.campoForm {
+    margin-bottom: 20px;
+}
+
+.campoForm label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.campoForm select, 
+.campoForm textarea, 
+.campoForm input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campoForm select:focus, 
+.campoForm textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.campoForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botão de Registro */
+#formChamado button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+#formChamado button:hover {
+    background-color: var(--primary-hover);
+}
+
+#formChamado button:active {
+    transform: scale(0.98);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    #cardCampos {
+        padding: 20px;
+    }
+    
+    .topo_soli h1 {
+        font-size: 1.25rem;
+    }
+}
